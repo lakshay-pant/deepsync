@@ -17,6 +17,9 @@ p {
 	line-height: 30px;
 	font-weight: 400;
 }
+img {
+	max-width: 100%;
+}
 .cmn_btn_primary {
 	background: #fff;
 	color: #5859f4;
@@ -54,7 +57,9 @@ header li.nav-item.active a.nav-link {
 
 section.feature_banner_sec {
 	background: #5859f4;
-	padding: 210px 0 160px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
 }
 .ftr_bnr_con p {
 	max-width: 50%;
@@ -188,6 +193,7 @@ footer {
 }
 .ftr_btm_prt {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	margin: 70px 0 0;
@@ -204,8 +210,104 @@ footer {
 	margin: 0 7px 0;
 }
 
+/* media queries start */
 @media (min-width: 991px) {
 	header .navbar-expand-lg .navbar-collapse {
 		justify-content: center;
+	}
+}
+
+@media (max-width: 767px) {
+	p {
+		font-size: 14px;
+		line-height: 22px;
+		text-align: justify;
+	}
+	.ftr_bnr_ttl {
+		font-size: 27px;
+		word-break: break-all;
+		line-height: 38px;
+	}
+	.grow_con_img img,
+	.crt_dpsync_img img {
+		max-width: 100%;
+	}
+	section.feature_banner_sec {
+		height: auto;
+		padding: 110px 0 40px;
+	}
+	.ftr_bnr_con p {
+		max-width: 100%;
+	}
+	header button.navbar-toggler {
+		color: #fff;
+		font-size: 28px;
+		padding: 0;
+		margin: 3px 15px 0 0;
+	}
+	.cmn_btn_primary {
+		font-size: 16px;
+	}
+	header .navbar-brand img {
+		max-width: 150px;
+	}
+	header .cmn_btn_primary {
+		padding: 5px 18px;
+	}
+	.cmn_hdng_ttl {
+		font-size: 22px;
+		line-height: 30px;
+	}
+	.cmn_hdng_con,
+	section.grow_engage_sec .cmn_hdng_con {
+		margin: 0 0 30px;
+	}
+	.crt_dpsync_ttl {
+		font-size: 22px;
+		line-height: 28px;
+	}
+	.crt_dpsync_con {
+		margin: 0 0 40px;
+	}
+	section.cret_deep_sec {
+		padding: 40px 0 0;
+	}
+	section.grow_engage_sec {
+		padding: 40px 0;
+	}
+	.crt_dpsync_con {
+		margin: 0 0 40px;
+	}
+	.qlty_ado_con {
+		max-width: 100%;
+	}
+	.qlty_ado_con strong {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	section.quality_audio_sec {
+		padding: 40px 0;
+	}
+	footer {
+		padding: 40px 0 30px;
+	}
+	.ftr_lnks_sngl {
+		margin: 0 0 25px;
+	}
+	.ftr_lnks_sngl ul li {
+		margin: 0 0 4px;
+	}
+	.ftr_lgo {
+		margin: 0 0 30px;
+	}
+	.ftr_btm_prt {
+		margin: 0;
+	}
+	.ftr_btm_prt ul {
+		margin: 20px 0 0;
+	}
+	.ftr_btm_prt ul li {
+		font-size: 14px;
+		text-align: center;
 	}
 }
